@@ -1,0 +1,18 @@
+server:
+  port: 8989
+  context-path: /springboot_2
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springmvc
+    username: root
+    password: root
+    type: org.apache.commons.dbcp.BasicDataSource
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+mybatis:
+  # 如果使用通用mapper 就不需要 mapper-locations:
+  # mapper-locations: classpath:com/baizhi/mapping/*Mapper.xml
+  type-aliases-package: com.baizhi.entity
